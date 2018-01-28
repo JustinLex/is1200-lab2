@@ -10,7 +10,25 @@
 #include <stdlib.h>
 
 #define COLUMNS 6
+int current_column = 1;
 
+//written by Justin
+int print_number(int number) {
+  printf("%10d", number); //print number
+  if(current_column == 6) {
+    printf("\n"); // if we're in last column, print newline and reset
+    current_column = 1;
+  }
+  else current_column++;
+  return 0;
+}
+
+int is_prime(int n){
+  for(int i=2; i<n; i++) {
+    if(n%i == 0) return 0;
+  }
+  return 1;
+}
 
 void print_primes(int n){
   // Should print out all prime numbers less than 'n'
@@ -18,15 +36,9 @@ void print_primes(int n){
   // the number of columns is stated in the define
   // COLUMNS
 
-  printf("%10d ", 2);
-  printf("%10d ", 3);
-  printf("%10d ", 5);
-  printf("%10d ", 7);
-  printf("%10d ", 11);
-  printf("%10d ", 13);
-  printf("\n");
-  printf("%10d ", 17);
-  printf("%10d ", 19);
+  for( int i = 2; i<= n; i++) {
+    if(is_prime(i)) print_number(i);
+  }
 
   printf("\n");
 }
@@ -41,5 +53,3 @@ int main(int argc, char *argv[]){
     printf("Please state an interger number.\n");
   return 0;
 }
-
- 
