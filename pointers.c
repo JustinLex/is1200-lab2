@@ -30,7 +30,7 @@ void endian_proof(const char* c){
 
 void copycodes(char* text, int* list, int* count) {
   while(*text) { //while *text points to something non-zero
-    printf("textaddr %X listaddr%X\n",text, list);
+    printf("textaddr % 0.16lX listaddr% 0.16lX\n",text, list);
     *list = *text; //copy what's at text to what's at list
     printf("copied %c -> %X\n", *text, *list);
     text++; //increment text position
