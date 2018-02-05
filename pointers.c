@@ -10,7 +10,7 @@ char* text2 = "Yet another thing.";
 int* list1;
 int* list2;
 
-char count = 0;
+int count = 0;
 
 
 void printlist(const int* lst){
@@ -28,7 +28,7 @@ void endian_proof(const char* c){
 
 }
 
-void copycodes(char* text, int* list, char* count) {
+void copycodes(char* text, int* list, int* count) {
   while(*text) { //while *text points to something non-zero
     printf("textaddr %X listaddr%X\n",text, list);
     *list = *text; //copy what's at text to what's at list
