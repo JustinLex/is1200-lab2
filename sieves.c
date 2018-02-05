@@ -20,7 +20,7 @@ void print_number(int num)
 
 void print_sieves(int n)
 {
-  int array [n];
+  _Bool array [n];
   for(int i=0; i<n-1; i++)
     array[i]=1;
   for(int j=2; j<sqrt(n); j++)
