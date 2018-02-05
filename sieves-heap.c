@@ -20,7 +20,7 @@ void print_number(int num)
 
 void print_sieves(int n)
 {
-  int *array=malloc(sizeof(int)*n);
+  _Bool *array=malloc(n);
   for(int i=0; i<n-1; i++)
     array[i]=1;
   for(int j=2; j<sqrt(n); j++)
